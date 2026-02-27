@@ -9,9 +9,8 @@ export const useEditoraStore = defineStore('editora', () => {
   const editoras = ref([
     {
       id: 1,
-      descricao: 'Editora 1'
-    },
-
+      description: 'Editora 1'
+    }
   ])
   const meta = ref({
     page: 0,

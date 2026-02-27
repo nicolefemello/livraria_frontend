@@ -1,10 +1,10 @@
-@import "./base.css";
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
+  color: #000;
 }
 
-input[type="text"] {
+input[type='text'] {
   padding: 12px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -14,7 +14,7 @@ input[type="text"] {
   transition: border-color 0.3s;
 }
 
-input[type="text"]:focus {
+input[type='text']:focus {
   border-color: #343a40;
   outline: none;
 }
@@ -57,7 +57,6 @@ input[type="text"]:focus {
   min-width: 100%;
   max-width: 100%;
 }
-
 
 button {
   padding: 12px 25px;

@@ -4,7 +4,7 @@ import { useCategoriaStore } from '@/stores/categoria'
 
 const categoriaStore = useCategoriaStore()
 
-const defaultCategoria = { id: null, descricao: '' }
+const defaultCategoria = { id: null, description: '' }
 const categoria = reactive({ ...defaultCategoria })
 
 onMounted(async () => {
@@ -34,13 +34,13 @@ async function excluir(id) {
   <div class="container">
     <h1>Categorias</h1>
     <div class="form">
-      <input type="text" v-model="categoria.descricao" placeholder="Descrição" />
+      <input type="text" v-model="categoria.description" placeholder="Descrição" />
       <button @click="salvar">Salvar</button>
       <button @click="limpar">Limpar</button>
     </div>
     <ul class="categoria-list">
       <li v-for="categoria in categoriaStore.categorias" :key="categoria.id">
-        <span @click="editar(categoria)"> ({{ categoria.id }}) - {{ categoria.descricao }} </span>
+        <span @click="editar(categoria)"> ({{ categoria.id }}) - {{ categoria.description }} </span>
         <button @click="excluir(categoria.id)">Excluir</button>
       </li>
     </ul>
@@ -48,10 +48,8 @@ async function excluir(id) {
       <button :disabled="categoriaStore.meta.page == 1" @click="categoriaStore.paginaAnterior">
         Anterior
       </button>
-      <button
-        :disabled="categoriaStore.meta.page == categoriaStore.meta.total_pages"
-        @click="categoriaStore.proximaPagina"
-      >
+      <button :disabled="categoriaStore.meta.page == categoriaStore.meta.total_pages"
+        @click="categoriaStore.proximaPagina">
         Próxima
       </button>
       <span>Página {{ categoriaStore.meta.page }} de {{ categoriaStore.meta.total_pages }}</span>
@@ -60,7 +58,6 @@ async function excluir(id) {
 </template>
 
 <style scoped>
-
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
@@ -138,6 +135,7 @@ button:disabled:hover {
   margin: 0;
   width: 100%;
   max-width: 500px;
+  color: #000;
 }
 
 li {

@@ -9,15 +9,15 @@ export const useCategoriaStore = defineStore('categoria', () => {
   const categorias = ref([
     {
       id: 1,
-      descricao: 'Categoria 1'
+      description: 'Categoria 1'
     },
     {
       id: 2,
-      descricao: 'Categoria 2'
+      description: 'Categoria 2'
     },
     {
       id: 3,
-      descricao: 'Categoria 3'
+      description: 'Categoria 3'
     }
   ])
   const meta = ref({
